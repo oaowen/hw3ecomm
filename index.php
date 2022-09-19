@@ -48,11 +48,11 @@ $conn->close();
 ?>
   </tbody>
     </table>
-    <h1>Welcome to the Univeristy of Owen Record</h1>
+    <h1>Welcome to the Univeristy of Owen Records</h1>
     <p>Please enter the name of a professor you are looking for<p>
     <form action="handlepost.php" method="get">
 Instructor Name: <input type="text" name="Instructor_name"><br>
-Instructor ID=: <input type="text" name="Instructor_id"><br>
+Instructor ID: <input type="text" name="Instructor_id"><br>
 <input type="submit">
 </form>
     
