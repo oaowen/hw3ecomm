@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["Instructor_id"]?></td>
+    <td><?=$row["C"]?></td>
     <td><?=$row["Instructor_name"]?></td>
   </tr>
 <?php
@@ -50,8 +50,8 @@ $conn->close();
     </table>
     <h1>Hello, world!</h1>
     <form action="handlepost.php" method="get">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
+Instructor Name: <input type="text" name="Instructor_name"><br>
+Instructor ID=: <input type="text" name="Instructor_id"><br>
 <input type="submit">
 </form>
     
