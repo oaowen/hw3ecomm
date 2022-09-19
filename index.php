@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Page One</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
@@ -48,7 +48,8 @@ $conn->close();
 ?>
   </tbody>
     </table>
-    <h1>Hello, world!</h1>
+    <h1>Welcome to the Univeristy of Owen Record</h1>
+    <p>Please enter the name of a professor you are looking for<p>
     <form action="handlepost.php" method="get">
 Instructor Name: <input type="text" name="Instructor_name"><br>
 Instructor ID=: <input type="text" name="Instructor_id"><br>
