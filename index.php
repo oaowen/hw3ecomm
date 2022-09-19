@@ -17,8 +17,8 @@
   <tbody>
     <?php
 $servername = "localhost";
-$username = "homework3";
-$password = "HW#ECOMM9/12";
+$username = "oaowenou_homework3";
+$password = "TAnner01!!";
 $dbname = "oaowenou_hw3ecomm";
 
 // Create connection
