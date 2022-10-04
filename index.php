@@ -9,13 +9,13 @@ include('header.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page One</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  </head>
-  <body >
+ <body>
+    <h1>Instructors</h1>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Name</th>
+      <th>ID</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +24,7 @@ $servername = "localhost";
 $username = "oaowenou_homework3";
 $password = "TAnner01!!";
 $dbname = "oaowenou_hw3ecomm";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -40,8 +41,8 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["C"]?></td>
-    <td><?=$row["Instructor_name"]?></td>
+    <td><?=$row["Instructor_id"]?></td>
+    <td><a href="instructor-section.php?id=<?=$row["Instructor_id"]?>"><?=$row["Instructor_name"]?></a></td>
   </tr>
 <?php
   }
@@ -52,15 +53,6 @@ $conn->close();
 ?>
   </tbody>
     </table>
-    <h1>Welcome to the Univeristy of Owen Records</h1>
-    <p>Please enter the name of a professor you are looking for<p>
-    <form style="background-color:#33475b" action="handlepost.php" method="get">
-Instructor Name: <input type="text" name="Instructor_name"><br>
-Instructor ID: <input type="text" name="Instructor_id"><br>
-<input type="submit">
-</form>
-    
-    <a class="btn btn-primary" href="page2.html" role="button">Page 2</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </body>
 </html>
