@@ -19,6 +19,7 @@
         <a class="nav-link" href="courses.php">Courses</a>
         <a class="nav-link" href="course-sections.php">Section</a>
         <a class="nav-link" href="instructor-cards.php">Instructor Cards</a>
+        <a class="nav-link" href="instructor-cards.php">Instructor Cards</a>
         
       </div>
     </div>
