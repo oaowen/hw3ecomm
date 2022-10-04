@@ -16,14 +16,15 @@
       <th>Number</th>
       <th>Section</th>
       <th>Instructor</th>
+      <th>Building Name</th>
     </tr>
   </thead>
   <tbody>
     <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "oaowenou_homework3";
+$password = "TAnner01!!";
+$dbname = "oaowenou_hw3ecomm";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -33,7 +34,7 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['id'];
 //echo $iid;
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where c.course_id=" . $cid;
+$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number,b.building_name from section s join instructor i on i.instructor_id = s.instructor_id join Building b on b.build_id = s.build_id join  course c on c.course_id = s.course_id where c.course_id=" . $cid;
 //echo $sql;
     $result = $conn->query($sql);
 
@@ -47,6 +48,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
     <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["building_name"]?></td>
   </tr>
 <?php
   }
