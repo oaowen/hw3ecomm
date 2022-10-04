@@ -52,10 +52,10 @@ $conn->close();
 ?>
   </tbody>
     </table>
-    <h1>Hello, world!</h1>
+    <h1>Welcome to Owen University!</h1>
     <form action="handlepost.php" method="get">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
+InstructorName: <input type="text" name="name"><br>
+InstructorID: <input type="text" name="email"><br>
 <input type="submit">
 </form>
     
