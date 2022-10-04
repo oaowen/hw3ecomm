@@ -15,15 +15,17 @@
       <th>Prefix</th>
       <th>Number</th>
       <th>Description</th>
+      <th>Course Name</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "0w_zeP}]OVy0";
-$dbname = "projecto_homework3";
+$username = "oaowenou_homework3";
+$password = "TAnner01!!";
+$dbname = "oaowenou_hw3ecomm";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -44,6 +46,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["prefix"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["description"]?></td>
+    <td><?=$row["course_name"]?></td>
     <td>
       <form method="post" action="course-section.php">
         <input type="hidden" name="id" value="<?=$row["course_id"]?>" />
