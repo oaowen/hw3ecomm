@@ -20,7 +20,7 @@
         <a class="nav-link" href="sections.php">Section</a>
         <a class="nav-link" href="instructor-cards.php">Instructor Cards</a>
         <a class="nav-link" href="course-section.php">Course Section</a>
-        <a class="nav-link" href="building-cards.php">Buildings</a>
+       
         
       </div>
     </div>
