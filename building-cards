@@ -32,7 +32,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT building_name, building_acc from Building";
+$sql = "SELECT * from Building";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -40,8 +40,9 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["build_name"]?></td>
-    <td><?=$row["build_acc"]?></td>
+    <td><?=$row["building_name"]?></td>
+    <td><?=$row["building_acc"]?></td>
+    <td><?=$row["build_id"]?></td>
   </tr>
 <?php
   }
