@@ -17,7 +17,7 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         <a class="nav-link" href="courses.php">Courses</a>
-        <a class="nav-link" href="course-sections.php">Section</a>
+        <a class="nav-link" href="sections.php">Section</a>
         <a class="nav-link" href="instructor-cards.php">Instructor Cards</a>
         <a class="nav-link" href="building-cards.php">Building Cards</a>
         
