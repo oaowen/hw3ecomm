@@ -38,7 +38,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id join Building b on b.build_id=s.build_id";
+$sql = "select section_id, section_number, i.Instructor_name, c.prefix, c.number from section s join Instructor i on i.Instructor_id = s.Instructor_id join course c on c.course_id = s.course_id join Building b on b.build_id=s.build_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
     <td><?=$row["prefix"]?></td>
     <td><?=$row["number"]?></td>
     <td><?=$row["section_number"]?></td>
-    <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["Instructor_name"]?></td>
     <td><?=$row["building_name"]?></td>
   </tr>
 <?php
