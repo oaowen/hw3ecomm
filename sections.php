@@ -20,6 +20,7 @@ include('header.php');
       <th>Number</th>
       <th>Section</th>
       <th>Instructor</th>
+      <th>Building Name</th>
     </tr>
   </thead>
   <tbody>
@@ -38,7 +39,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "select section_id, section_number, i.Instructor_name, c.prefix, c.number from section s join Instructor i on i.Instructor_id = s.Instructor_id join course c on c.course_id = s.course_id join Building b on b.build_id=s.build_id";
+$sql = "select section_id, section_number, b.building_name,i.Instructor_name, c.prefix, c.number from section s join Instructor i on i.Instructor_id = s.Instructor_id join course c on c.course_id = s.course_id join Building b on b.build_id=s.build_id";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
